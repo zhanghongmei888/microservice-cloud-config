@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: -dev  #头文件
+
+---
+#生产配置
+spring:
+  profiles: dev
+  application:
+    name: cloud-config-dev
+server: 
+  port: 8888
+
+---
+#测试配置
+spring:
+  profiles: test
+  application:
+    name: cloud-config-test
+server: 
+  port: 8899
